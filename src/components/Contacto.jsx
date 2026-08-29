@@ -4,10 +4,11 @@ import { CONTACTO } from '../data/content.js';
 import './Contacto.css';
 
 export default function Contacto() {
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedTelefono, setCopiedTelefono] = useState(false);
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(CONTACTO.email).then(() => {
+  const copyToClipboard = (value, setCopied) => {
+    navigator.clipboard.writeText(value).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
@@ -29,8 +30,12 @@ export default function Contacto() {
           <div className="contacto__card contacto__card--info">
             <span className="contacto__card-label">Email</span>
             <span className="contacto__card-value">{CONTACTO.email}</span>
-            <button type="button" className="contacto__copy-btn" onClick={handleCopyEmail}>
-              {copied ? '✓ Copiado' : 'Copiar email'}
+            <button
+              type="button"
+              className="contacto__copy-btn"
+              onClick={() => copyToClipboard(CONTACTO.email, setCopiedEmail)}
+            >
+              {copiedEmail ? '✓ Copiado' : 'Copiar email'}
             </button>
           </div>
           <a
@@ -45,6 +50,13 @@ export default function Contacto() {
           <div className="contacto__card contacto__card--info">
             <span className="contacto__card-label">Teléfono</span>
             <span className="contacto__card-value">{CONTACTO.telefono}</span>
+            <button
+              type="button"
+              className="contacto__copy-btn"
+              onClick={() => copyToClipboard(CONTACTO.telefono, setCopiedTelefono)}
+            >
+              {copiedTelefono ? '✓ Copiado' : 'Copiar número'}
+            </button>
           </div>
         </Reveal>
 

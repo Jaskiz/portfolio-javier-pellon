@@ -1,0 +1,104 @@
+.freelance {
+  position: relative;
+  padding: var(--section-padding);
+  background: var(--bg-base);
+  overflow: hidden;
+}
+
+.freelance__dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(124, 92, 255, 0.1) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.freelance__inner {
+  position: relative;
+}
+
+.freelance__lead {
+  max-width: 640px;
+  margin: 26px 0 0;
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text-paragraph);
+  text-wrap: pretty;
+}
+
+.freelance__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 46px;
+}
+
+.freelance__card {
+  padding: 24px;
+  border-radius: 20px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-subtle);
+  transition: transform 0.28s, border-color 0.28s;
+}
+
+.freelance__card:hover {
+  transform: translateY(-5px);
+}
+
+.freelance__card--spring:hover {
+  border-color: rgba(124, 92, 255, 0.5);
+}
+.freelance__card--front:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+.freelance__card--api:hover {
+  border-color: rgba(45, 212, 191, 0.5);
+}
+.freelance__card--data:hover {
+  border-color: rgba(52, 211, 153, 0.5);
+}
+.freelance__card--infra:hover {
+  border-color: rgba(251, 113, 133, 0.5);
+}
+.freelance__card--otros:hover {
+  border-color: rgba(249, 115, 22, 0.5);
+}
+
+.freelance__numero {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.freelance__card--spring .freelance__numero {
+  color: var(--accent);
+}
+.freelance__card--front .freelance__numero {
+  color: var(--cat-front);
+}
+.freelance__card--api .freelance__numero {
+  color: var(--cat-api);
+}
+.freelance__card--data .freelance__numero {
+  color: var(--cat-data);
+}
+.freelance__card--infra .freelance__numero {
+  color: var(--cat-infra);
+}
+.freelance__card--otros .freelance__numero {
+  color: var(--cat-otros);
+}
+
+.freelance__titulo {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.freelance__texto {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-muted);
+}

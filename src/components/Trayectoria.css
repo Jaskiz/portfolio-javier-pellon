@@ -1,0 +1,182 @@
+.trayectoria {
+  position: relative;
+  padding: var(--section-padding);
+  background: var(--bg-base);
+}
+
+.trayectoria__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 14px;
+}
+
+.trayectoria__intro {
+  max-width: 400px;
+  margin: 0;
+  font-size: 16.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+.trayectoria__timeline {
+  position: relative;
+  margin-top: 56px;
+  padding-left: 34px;
+}
+
+.trayectoria__line {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  width: 2px;
+  height: 0;
+  background: linear-gradient(180deg, var(--cat-data), var(--accent) 45%, var(--cat-neutral));
+  transition: height 1.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.trayectoria__track {
+  position: absolute;
+  left: 8px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 2px;
+}
+
+.trayectoria__items {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.trayectoria__item {
+  position: relative;
+}
+
+.trayectoria__dot {
+  position: absolute;
+  left: -32px;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.trayectoria__dot--data {
+  background: var(--cat-data);
+  box-shadow: 0 0 0 4px rgba(52, 211, 153, 0.16);
+}
+.trayectoria__dot--front {
+  background: var(--cat-front);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.16);
+}
+.trayectoria__dot--infra {
+  background: var(--cat-infra);
+  box-shadow: 0 0 0 4px rgba(251, 113, 133, 0.16);
+}
+.trayectoria__dot--otros {
+  background: var(--cat-otros);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.16);
+}
+.trayectoria__dot--api {
+  background: var(--cat-api);
+  box-shadow: 0 0 0 4px rgba(45, 212, 191, 0.16);
+}
+.trayectoria__dot--neutral {
+  background: var(--cat-neutral);
+  box-shadow: 0 0 0 4px rgba(107, 114, 128, 0.16);
+}
+
+.trayectoria__card {
+  cursor: pointer;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: var(--surface-1);
+  border: 1px solid var(--border-base);
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.trayectoria__card:hover {
+  transform: translateX(4px);
+}
+
+.trayectoria__card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+  justify-content: space-between;
+}
+
+.trayectoria__card-head-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.trayectoria__puesto {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--text-heading);
+}
+
+.trayectoria__empresa {
+  font-size: 15.5px;
+}
+.trayectoria__empresa--data {
+  color: var(--cat-data);
+}
+.trayectoria__empresa--front {
+  color: var(--cat-front);
+}
+.trayectoria__empresa--infra {
+  color: var(--cat-infra);
+}
+.trayectoria__empresa--otros {
+  color: var(--cat-otros);
+}
+.trayectoria__empresa--api {
+  color: var(--cat-api);
+}
+.trayectoria__empresa--neutral {
+  color: var(--cat-neutral);
+}
+
+.trayectoria__badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(52, 211, 153, 0.16);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: var(--cat-data);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.trayectoria__fecha {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+.trayectoria__detalle {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}

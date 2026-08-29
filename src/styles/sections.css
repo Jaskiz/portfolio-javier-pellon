@@ -1,0 +1,25 @@
+/* Estilos compartidos entre secciones: contenedor, kicker y titulares.
+   Cada sección importa este fichero además de su propio CSS. */
+
+.section-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(42px, 6vw, 84px);
+  line-height: 0.9;
+  margin: 14px 0 0;
+  color: var(--text-heading);
+}

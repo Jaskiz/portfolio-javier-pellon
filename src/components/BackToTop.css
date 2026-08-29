@@ -1,0 +1,66 @@
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 58;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 15px;
+  border-radius: 12px;
+  background: rgba(23, 28, 36, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 92, 255, 0.4);
+  box-shadow: 0 14px 34px -14px rgba(0, 0, 0, 0.9);
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.04em;
+  color: var(--accent-light);
+  opacity: 0;
+  transform: translateY(14px);
+  pointer-events: none;
+  transition: opacity 0.35s, transform 0.35s, border-color 0.25s, background 0.25s;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.back-to-top:hover {
+  border-color: var(--accent);
+  background: rgba(124, 92, 255, 0.18);
+  color: var(--accent-lighter);
+}
+
+.back-to-top__arrow {
+  font-size: 15px;
+  line-height: 1;
+  color: var(--accent);
+  animation: floaty 2.6s ease-in-out infinite;
+}
+
+.back-to-top__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.25;
+}
+
+.back-to-top__label {
+  color: var(--text-body);
+}
+
+.back-to-top__cmd {
+  font-size: 10.5px;
+  color: var(--text-dim);
+}
+
+.back-to-top__caret {
+  display: inline-block;
+  width: 6px;
+  height: 11px;
+  background: var(--accent);
+  animation: caret 1.05s steps(1) infinite;
+}

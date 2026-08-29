@@ -1,0 +1,38 @@
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.028) 0px,
+    rgba(255, 255, 255, 0.028) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+.sweep-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 56;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sweep {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(124, 92, 255, 0.055) 45%,
+    rgba(124, 92, 255, 0.11) 50%,
+    rgba(124, 92, 255, 0.055) 55%,
+    transparent
+  );
+  animation: sweep 9s linear infinite;
+}

@@ -1,0 +1,96 @@
+.phone-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.phone-carousel__frame {
+  position: relative;
+  width: 344px;
+  transform-origin: top center;
+  padding: 12px;
+  border-radius: 54px;
+  background: linear-gradient(160deg, #3a404c, #191d25 45%, #2b313b);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.phone-carousel__screen {
+  position: relative;
+  width: 320px;
+  height: 736px;
+  border-radius: 44px;
+  background: var(--bg-mobile);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.phone-carousel__viewport {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.phone-carousel__track {
+  display: flex;
+  width: 1600px;
+  height: 100%;
+  transition: transform 0.55s cubic-bezier(0.3, 0.9, 0.2, 1);
+}
+
+.phone-carousel__track img {
+  width: 320px;
+  height: 736px;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.phone-carousel__controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.phone-carousel__arrow {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-paragraph);
+  cursor: pointer;
+  font-size: 15px;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.phone-carousel__arrow:hover {
+  border-color: rgba(124, 92, 255, 0.6);
+  color: #fff;
+}
+
+.phone-carousel__tab {
+  padding: 9px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  background: var(--surface-2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-muted);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.phone-carousel__tab.is-active {
+  background: rgba(124, 92, 255, 0.18);
+  border: 1px solid rgba(124, 92, 255, 0.65);
+  color: var(--accent-lighter);
+}
+
+.phone-carousel__caption {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-faint);
+}

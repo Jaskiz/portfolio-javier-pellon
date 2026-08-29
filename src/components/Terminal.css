@@ -1,0 +1,95 @@
+.terminal {
+  border-radius: 16px;
+  background: var(--bg-terminal);
+  border: 1px solid rgba(124, 92, 255, 0.28);
+  box-shadow: 0 24px 60px -26px rgba(0, 0, 0, 0.95);
+  overflow: hidden;
+}
+
+.terminal__titlebar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.terminal__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.terminal__title {
+  margin-left: 6px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-faint);
+}
+
+.terminal__body {
+  padding: 16px 18px;
+  min-height: 168px;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+.terminal__line {
+  color: var(--text-paragraph);
+}
+
+.terminal__prompt {
+  color: var(--accent);
+}
+
+.terminal__path {
+  color: var(--cat-api-fg);
+}
+
+.terminal__typed {
+  color: var(--text-body);
+}
+
+.terminal__caret {
+  display: inline-block;
+  width: 8px;
+  height: 14px;
+  vertical-align: -2px;
+  background: var(--accent);
+  animation: caret 1.05s steps(1) infinite;
+}
+
+.terminal__out div {
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.terminal__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 12px 14px;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.terminal__btn {
+  padding: 7px 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: var(--text-muted);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.terminal__btn.is-active {
+  background: rgba(124, 92, 255, 0.18);
+  border: 1px solid rgba(124, 92, 255, 0.6);
+  color: var(--accent-lighter);
+}

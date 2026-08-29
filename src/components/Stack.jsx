@@ -29,6 +29,14 @@ export default function Stack() {
     return () => window.removeEventListener('resize', onResize);
   }, []);
 
+  useEffect(() => {
+    const onDocClick = (e) => {
+      if (!e.target.closest('.stack__box')) setHover(null);
+    };
+    document.addEventListener('click', onDocClick);
+    return () => document.removeEventListener('click', onDocClick);
+  }, []);
+
   const narrow = vw < NARROW_BREAKPOINT;
   const placed = useMemo(() => layout(vw), [vw]);
   const boxHeight = narrow ? SKILLS.length * 52 + 40 : 600;
@@ -41,7 +49,7 @@ export default function Stack() {
           <h2 className="section-title" style={{ margin: 0 }}>
             Mi constelación
           </h2>
-          <p className="stack__intro">Pasa el ratón por cualquier tecnología para ver su familia.</p>
+          <p className="stack__intro">Pulsa sobre cualquier tecnología para ver su familia.</p>
         </Reveal>
 
         <Reveal className="stack__box" style={{ height: `${boxHeight}px` }}>
@@ -94,6 +102,10 @@ export default function Stack() {
                 }}
                 onMouseEnter={() => setHover(i)}
                 onMouseLeave={() => setHover(null)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setHover(i);
+                }}
               >
                 <span className="stack__pill-dot" style={{ background: c.dot }} />
                 <span style={{ color: on ? 'var(--text-heading)' : c.fg }}>{s.name}</span>

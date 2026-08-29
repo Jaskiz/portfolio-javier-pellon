@@ -83,7 +83,7 @@
   border-radius: 999px;
   background: var(--surface-2);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  cursor: default;
+  cursor: pointer;
   white-space: nowrap;
   font-size: 13.5px;
   transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;

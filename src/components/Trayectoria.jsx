@@ -4,7 +4,7 @@ import { TRAYECTORIA } from '../data/content.js';
 import './Trayectoria.css';
 
 export default function Trayectoria() {
-  const [open, setOpen] = useState(1);
+  const [open, setOpen] = useState(null);
   const lineRef = useRef(null);
   const trackRef = useRef(null);
 

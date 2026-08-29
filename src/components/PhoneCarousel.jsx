@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { APP_SCREENS } from '../data/content.js';
 import './PhoneCarousel.css';
 
@@ -9,7 +9,6 @@ const FRAME_HEIGHT = 760;
 export default function PhoneCarousel() {
   const [screen, setScreen] = useState(0);
   const [scale, setScale] = useState(1);
-  const frameRef = useRef(null);
 
   useEffect(() => {
     const onResize = () => {
@@ -26,7 +25,6 @@ export default function PhoneCarousel() {
   return (
     <div className="phone-carousel">
       <div
-        ref={frameRef}
         className="phone-carousel__frame"
         style={{ transform: `scale(${scale.toFixed(3)})`, marginBottom: `${marginBottom}px` }}
       >

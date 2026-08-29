@@ -74,6 +74,22 @@
   font-weight: 500;
 }
 
+.contacto__copy-btn {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 4px 0;
+  background: none;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent-light);
+  cursor: pointer;
+}
+
+.contacto__copy-btn:hover {
+  color: var(--accent-lighter);
+  text-decoration: underline;
+}
+
 .contacto__actions {
   display: flex;
   flex-wrap: wrap;

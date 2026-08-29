@@ -1,8 +1,22 @@
+import { useState } from 'react';
 import Reveal from './Reveal.jsx';
 import { CONTACTO } from '../data/content.js';
 import './Contacto.css';
 
 export default function Contacto() {
+  const [copied, setCopied] = useState(false);
+
+  // Copia el email aparte del mailto: si el visitante no tiene cliente de correo
+  // configurado, el mailto: le deja la pestaña en blanco y así puede pegarlo donde quiera.
+  const handleCopyEmail = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigator.clipboard.writeText(CONTACTO.email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
   return (
     <section id="contacto" className="contacto">
       <div className="section-inner">
@@ -19,6 +33,9 @@ export default function Contacto() {
           <a href={`mailto:${CONTACTO.email}`} className="contacto__card contacto__card--email">
             <span className="contacto__card-label">Email</span>
             <span className="contacto__card-value">{CONTACTO.email}</span>
+            <button type="button" className="contacto__copy-btn" onClick={handleCopyEmail}>
+              {copied ? '✓ Copiado' : 'Copiar email'}
+            </button>
           </a>
           <a
             href={CONTACTO.linkedinHref}

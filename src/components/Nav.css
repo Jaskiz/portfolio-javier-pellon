@@ -67,3 +67,19 @@
   border-color: var(--accent);
   color: var(--accent-lighter) !important;
 }
+
+/* En pantallas estrechas no caben los 4 enlaces + el boton sin amontonarse:
+   se dejan solo la marca y la llamada a la accion, el resto se alcanza haciendo scroll. */
+@media (max-width: 640px) {
+  .nav {
+    padding: 12px 5vw;
+  }
+
+  .nav__brand-text {
+    font-size: 20px;
+  }
+
+  .nav__links a:not(.nav__cta) {
+    display: none;
+  }
+}

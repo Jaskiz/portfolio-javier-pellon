@@ -6,11 +6,7 @@ import './Contacto.css';
 export default function Contacto() {
   const [copied, setCopied] = useState(false);
 
-  // Copia el email aparte del mailto: si el visitante no tiene cliente de correo
-  // configurado, el mailto: le deja la pestaña en blanco y así puede pegarlo donde quiera.
-  const handleCopyEmail = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  const handleCopyEmail = () => {
     navigator.clipboard.writeText(CONTACTO.email).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
@@ -30,13 +26,13 @@ export default function Contacto() {
         </Reveal>
 
         <Reveal className="contacto__cards">
-          <a href={`mailto:${CONTACTO.email}`} className="contacto__card contacto__card--email">
+          <div className="contacto__card contacto__card--info">
             <span className="contacto__card-label">Email</span>
             <span className="contacto__card-value">{CONTACTO.email}</span>
             <button type="button" className="contacto__copy-btn" onClick={handleCopyEmail}>
               {copied ? '✓ Copiado' : 'Copiar email'}
             </button>
-          </a>
+          </div>
           <a
             href={CONTACTO.linkedinHref}
             target="_blank"
@@ -46,16 +42,13 @@ export default function Contacto() {
             <span className="contacto__card-label">LinkedIn</span>
             <span className="contacto__card-value">{CONTACTO.linkedin}</span>
           </a>
-          <a href={CONTACTO.telefonoHref} className="contacto__card contacto__card--telefono">
+          <div className="contacto__card contacto__card--info">
             <span className="contacto__card-label">Teléfono</span>
             <span className="contacto__card-value">{CONTACTO.telefono}</span>
-          </a>
+          </div>
         </Reveal>
 
         <Reveal className="contacto__actions">
-          <a href={`mailto:${CONTACTO.email}`} className="contacto__btn contacto__btn--primary">
-            Escríbeme →
-          </a>
           <a href={CONTACTO.cvHref} download={CONTACTO.cvNombre} className="contacto__btn contacto__btn--secondary">
             ↓ Descargar CV (PDF)
           </a>

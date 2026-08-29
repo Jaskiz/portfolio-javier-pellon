@@ -46,19 +46,10 @@
   transition: transform 0.28s, border-color 0.28s;
 }
 
-.contacto__card:hover {
-  transform: translateY(-5px);
-  color: var(--text-body);
-}
-
-.contacto__card--email:hover {
-  border-color: rgba(124, 92, 255, 0.55);
-}
 .contacto__card--linkedin:hover {
+  transform: translateY(-5px);
   border-color: rgba(59, 130, 246, 0.55);
-}
-.contacto__card--telefono:hover {
-  border-color: rgba(45, 212, 191, 0.55);
+  color: var(--text-body);
 }
 
 .contacto__card-label {
@@ -105,19 +96,6 @@
   border-radius: 14px;
   font-size: 16px;
   font-weight: 500;
-}
-
-.contacto__btn--primary {
-  background: var(--accent);
-  color: #fff !important;
-  font-weight: 600;
-  box-shadow: 0 16px 40px -14px rgba(124, 92, 255, 0.85);
-  transition: background 0.2s, transform 0.2s;
-}
-
-.contacto__btn--primary:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
 }
 
 .contacto__btn--secondary {

@@ -32,6 +32,34 @@
   transition: height 0.4s ease;
 }
 
+.stack__box--mobile {
+  padding: 26px 20px;
+}
+
+.stack__groups {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.stack__group-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.stack__group-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .stack__svg {
   position: absolute;
   inset: 0;
@@ -88,6 +116,11 @@
   font-size: 13.5px;
   transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
   z-index: 4;
+}
+
+.stack__pill--flow {
+  position: static;
+  font-family: inherit;
 }
 
 .stack__pill-dot {

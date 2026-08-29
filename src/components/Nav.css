@@ -36,6 +36,12 @@
   box-shadow: 0 0 12px 2px rgba(124, 92, 255, 0.8);
 }
 
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .nav__links {
   display: flex;
   flex-wrap: wrap;
@@ -68,8 +74,46 @@
   color: var(--accent-lighter) !important;
 }
 
+.nav__burger {
+  display: none;
+  flex: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.nav__burger span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text-body);
+  transition: transform 0.25s, opacity 0.2s;
+}
+
+.nav__burger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__burger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav__burger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav__mobile-menu {
+  display: none;
+}
+
 /* En pantallas estrechas no caben los 4 enlaces + el boton sin amontonarse:
-   se dejan solo la marca y la llamada a la accion, el resto se alcanza haciendo scroll. */
+   se dejan la marca, la llamada a la accion y un boton que despliega el resto. */
 @media (max-width: 640px) {
   .nav {
     padding: 12px 5vw;
@@ -81,5 +125,39 @@
 
   .nav__links a:not(.nav__cta) {
     display: none;
+  }
+
+  .nav__burger {
+    display: flex;
+  }
+
+  .nav__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 6px 5vw 16px;
+    background: rgba(15, 19, 26, 0.96);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--border-nav);
+  }
+
+  .nav__mobile-menu a {
+    padding: 13px 4px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav__mobile-menu a:last-child {
+    border-bottom: none;
+  }
+
+  .nav__mobile-menu a:hover {
+    color: var(--accent-lighter);
   }
 }

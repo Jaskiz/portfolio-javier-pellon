@@ -23,7 +23,14 @@ export default function Nav() {
 
   return (
     <nav className="nav">
-      <a href="#top" className="nav__brand">
+      <a
+        href="#top"
+        className="nav__brand"
+        onClick={(e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      >
         <span className="nav__brand-text">JAVIER PELLÓN</span>
         <span className="nav__brand-dot" />
       </a>

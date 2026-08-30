@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import AmbientLayers from './components/AmbientLayers.jsx';
 import BackToTop from './components/BackToTop.jsx';
 import Nav from './components/Nav.jsx';
@@ -24,6 +25,7 @@ export default function App() {
       <Stack />
       <Freelance />
       <Contacto />
+      <Analytics />
     </div>
   );
 }

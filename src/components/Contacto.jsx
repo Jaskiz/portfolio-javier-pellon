@@ -22,8 +22,8 @@ export default function Contacto() {
           Hablemos<span className="contacto__title-dot">.</span>
         </Reveal>
         <Reveal as="p" className="contacto__lead">
-          Cuéntame en dos líneas qué necesitas y te digo si puedo ayudarte, cuánto costaría y cuánto tardaría. Si
-          vienes de una empresa, el CV completo está a un clic.
+          Cuéntame qué problema tienes o qué necesitas y te digo si puedo ayudarte, cuánto costaría y cuánto
+          tardaría. Si vienes de una empresa, el CV completo está a un clic.
         </Reveal>
 
         <Reveal className="contacto__cards">

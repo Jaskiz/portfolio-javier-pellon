@@ -14,7 +14,7 @@ export default function Freelance() {
           funcionando por WhatsApp?
         </Reveal>
         <Reveal as="p" className="freelance__lead">
-          Trabajo con negocios pequeños de Córdoba y de donde haga falta. Monto la web, la tienda o el sistema de
+          Trabajo con negocios pequeños de cualquier lugar. Monto la web, la tienda o el sistema de
           reservas, te enseño a manejarlo sin tecnicismos y te lo dejo documentado por escrito. Presupuesto cerrado
           antes de empezar y sin plantillas recicladas.
         </Reveal>

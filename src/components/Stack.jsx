@@ -49,7 +49,7 @@ export default function Stack() {
           <h2 className="section-title" style={{ margin: 0 }}>
             Mi constelación
           </h2>
-          <p className="stack__intro">Pulsa sobre cualquier tecnología para ver su familia.</p>
+          <p className="stack__intro">Organizado por familias: backend, frontend, datos e infraestructura.</p>
         </Reveal>
 
         <Reveal className={`stack__box${narrow ? ' stack__box--mobile' : ''}`} style={narrow ? undefined : { height: '600px' }}>

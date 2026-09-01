@@ -90,7 +90,6 @@ export const CMDS = [
       'email      Javier7096@gmail.com',
       'teléfono   +34 693 322 449',
       'linkedin   linkedin.com/in/javierpellonvalenzuela',
-      'cv         ./CV_Javier_Pellon_Valenzuela.pdf',
     ],
   },
 ];

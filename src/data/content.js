@@ -87,7 +87,7 @@ export const CMDS = [
     key: 'contacto',
     label: './contacto.sh',
     out: [
-      'email      Javier7096@gmail.com',
+      'email      javierpellonv@gmail.com',
       'teléfono   +34 693 322 449',
       'linkedin   linkedin.com/in/javierpellonvalenzuela',
     ],
@@ -295,7 +295,7 @@ export const FREELANCE_SERVICIOS = [
 ];
 
 export const CONTACTO = {
-  email: 'Javier7096@gmail.com',
+  email: 'javierpellonv@gmail.com',
   telefono: '+34 693 322 449',
   telefonoHref: 'tel:+34693322449',
   linkedin: 'linkedin.com/in/javierpellonvalenzuela',
